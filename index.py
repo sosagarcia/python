@@ -11,8 +11,11 @@ def home():
 def principal():
     return render_template('principal.html')
 
+@app.route('/estadisticas')
+def estadisticas():
+    return render_template('estadisticas.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
 
-    
+
