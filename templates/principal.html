@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="icon" type="image/png" href="../img/PNG/64px/433-github.png" sizes="64x64">
+    <title>Pantalla principal</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="main.html"><span class="primero"><img
+                                src="{{url_for('static', filename='img/PNG/64px/001-home.png')}}"
+                                class="icon"></span>Inicio</a></li>
+                <li><a href="#"><span class="segundo"><i class="icon icon-map"></i></span>Categorías</a>
+                    <ul>
+                        <li><a href="categorias/camara.html"><span class="uno"><img
+                                        src="../img/PNG/32px/021-video-camera.png" class="icon"></span>Cámara</a></li>
+                        <li><a href="#"><span class="uno"><img src="../img/PNG/32px/039-file-text2.png"
+                                        class="icon"></span>Datos</a></li>
+                        <li><a href="categorias/acciones.php"><span class="uno"><img
+                                        src="../img/PNG/32px/086-keyboard.png" class="icon"></span>Acciones</a></li>
+                        <li><a href="categorias/estadisticas.html"><span class="uno"><img
+                                        src="../img/PNG/32px/156-stats-dots.png" class="icon"></span>Estadísticas</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#"><span class="tercero"><img src="../img/PNG/64px/001-home.png"
+                                class="icon"></span>Servicios</a>
+                </li>
+                <li><a href="#"><span class="cuarto"><img src="../img/PNG/32px/001-home.png" class="icon"></span>Acerca
+                        de</a>
+                </li>
+                <li><a href="/"><span class="quinto"><img src="../img/PNG/64px/433-github.png"
+                                class="icon"></span>Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

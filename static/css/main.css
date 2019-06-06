@@ -1,0 +1,260 @@
+ * {
+	margin:0;
+	padding:0;
+}
+body {
+	background: url(../img/Fondo1b.jpeg) no-repeat center top fixed;
+
+}
+/*Header*/
+
+header {
+	width: 100%;
+	height: 120px;
+	text-align: center;
+	display: flex;
+	line-height: 120px;
+	position: sticky;
+	top: 0;
+    
+}
+
+nav {
+	position: absolute;
+    top:-20px;
+    left:0;
+    right:0;
+	margin:20px auto;
+	max-width:1000px;
+	width:90%;
+}
+
+nav ul {
+	list-style:none;
+}
+
+nav > ul {
+	display:table;
+	width:100%;
+	background:#000;
+	opacity: 0.7;
+	position:relative;
+}
+
+nav > ul li {
+	display:table-cell;
+}
+
+nav > ul:hover{
+
+	opacity: 1;
+}
+
+/*Sub-menu*/
+nav > ul > li:hover > ul {
+	display:block;
+	height:100%;
+}
+nav > ul > li > ul {
+	display:block;
+	position:absolute;
+	background:#000;
+	opacity: 0.7;
+	left:0;
+	right:0;
+	overflow:hidden;
+	height:0%;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+  transition: all .3s ease;
+
+}
+
+nav > ul > li > ul:hover{
+	opacity: 0.9;
+}
+
+nav > ul li a {
+	color:#fff;
+	display:block;
+	line-height:20px;
+	padding:20px;
+	position: relative;
+	text-align:center;
+	text-decoration:none;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+  transition: all .3s ease;
+  
+}
+
+nav > ul > li > ul > li a:hover {
+	background:#5da5a2;
+	
+}
+
+nav > ul > li > a span {
+	background:#174459;
+	display:block;
+	height:100%;
+	width:100%;
+	left:0;
+	position:absolute;
+	top:-55px;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+nav > ul > li > a span .icon {
+	display:block;
+	line-height:60px;
+}
+
+nav > ul > li > a:hover > span {
+	top:0;
+}
+
+/*Colores*/
+nav ul li a .primero {
+	background:#0e5061;
+	opacity: 0.7;
+}
+
+nav ul li a .segundo {
+	background:#5da5a2;
+	opacity: 0.7;
+}
+
+nav ul li a .tercero {
+	background:#f25724;
+	opacity: 0.7;
+}
+
+nav ul li a .cuarto {
+	background:#174459;
+	opacity: 0.7;
+}
+
+nav ul li a .quinto {
+	background:#37a4d9;
+	opacity: 0.7;
+}
+
+/*Acciones*/
+
+div#general{
+	margin: auto;
+	width: 960px;
+	height: 800px;
+	background-color: white;
+	
+
+}
+div#Titulo{
+	float: left;
+	width: 640px;
+	height: 200px;
+	background-color: blue;
+	
+
+}
+
+
+div#lista{
+	float: right;
+	width: 300px;
+	height: 500px;
+	background-color: green;
+	
+
+}
+
+
+div#cuerpo{
+
+	width: 640px;
+	height: 580px;
+	background-color: purple;
+
+}
+
+h1 {
+	margin: 0;
+	padding: 0 0 20px;
+	background: #000;
+	text-align: center;
+	font-size: 30px;
+	color: white;
+}
+
+.btn{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+		text-decoration: none;
+		padding: 10px;
+		font-weight: 600;
+		font-size: 20px;
+		color: #ffffff;
+		background-color: #1883ba;
+		border-radius: 6px;
+		border: 2px solid #0016b0;
+	 }
+	 .btn:hover {
+		 cursor: pointer;
+		color: #18ba20;
+		background-color: #ffffff;
+	}
+	
+
+/*Camara*/
+
+div#Titulo1{
+	float: top;
+	
+	height: 200px;
+	background-color: blue;
+
+}
+div#cuerpo1{
+	float: right;
+	
+	width: 640px;
+	height: 580px;
+	background-color: purple;
+
+}
+.video{
+	
+	float: right
+}
+
+
+div#cuerpo2{
+
+	width: 640px;
+	height: 580px;
+
+}
+.graf{
+	border:1px solid #000000;
+
+}
+
+/*Estadísticas*/
+
+div#general3{
+	margin: auto;
+	width: 960px;
+	height: 800px;
+	background-color: rgb(255, 255, 255) ;
+	
+
+}
