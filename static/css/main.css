@@ -112,6 +112,7 @@
 
  nav>ul>li>a span .icon {
  	display: block;
+ 	width: 62px;
  	line-height: 60px;
  }
 
