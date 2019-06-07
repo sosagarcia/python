@@ -1,0 +1,23 @@
+{% extends "layout1.html" %}
+
+{% block conten %}
+<div class="login-box">
+    <img src="../static/img/logo.png" class="avatar" alt="Avatar Image">
+    <h1>Registro de usuario</h1>
+    <form action="/add_contact" method="POST">
+        <input type="text" name="fullname" placeholder="Nombre Completo">
+        <input type="text" name="phone" placeholder="Nº de Teléfono">
+        <input type="text" name="email" placeholder="Email">
+        <button type="submit">
+            Save
+        </button>
+
+    </form>
+
+
+</div>
+<a class="btn" href="principal"> Acceder</a>
+<a class="btn1" href="/"> Actualizar</a>
+
+
+{% endblock %}
