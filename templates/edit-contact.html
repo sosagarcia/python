@@ -1,0 +1,22 @@
+{% extends "layout1.html" %}
+
+{% block conten %}
+
+<div class="login-box">
+    <img src="../static/img/logo.png" class="avatar" alt="Avatar Image">
+    <h1>Edición de usuario</h1>
+    <form action="/add_contact" method="POST">
+        <input type="text" name="fullname" placeholder="Nombre Completo" value = {{contact.1}}>
+        <input type="text" name="phone" placeholder="Nº de Teléfono" value = {{contact.2}}>
+        <input type="text" name="email" placeholder="Email" value = {{contact.3}}>
+        <button type="submit">
+            Guardar
+        </button>
+
+    </form>
+</div> 
+
+<a class="btn btn-primary" href="/registro" role="button"> Registrar nuevo contacto</a>
+
+
+{% endblock %}
