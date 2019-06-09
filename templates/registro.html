@@ -1,6 +1,15 @@
 {% extends "layout1.html" %}
 
 {% block conten %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages  %}
+{% for message in messages %}
+<p>{{ message }}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
 <div class="login-box">
     <img src="../static/img/logo.png" class="avatar" alt="Avatar Image">
     <h1>Registro de usuario</h1>
