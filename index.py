@@ -16,7 +16,13 @@ app.secret_key = 'mysecretkey'
 
 @app.route('/')
 def home():
+
+    cur = mysql.connection.cursor()
+    cur.execute('SELECT * FROM contacts' )
+    cur.fetchall()
     return render_template('index.html')
+
+
 
 
 @app.route('/principal')
@@ -33,6 +39,10 @@ def estadisticas():
 def registro():
     return render_template('registro.html')
 
+@app.route('/lista')
+def lista():
+    return render_template('lista.html')
+
 
 @app.route('/add_contact', methods=['POST'])
 def add_contact():
@@ -44,7 +54,7 @@ def add_contact():
         cur.execute('INSERT INTO contacts (fullname, phone, email) VALUES(%s, %s, %s)', (fullname, phone, email))
         mysql.connection.commit()
         flash('El contactoHa sido agregado correctamente ')
-        return redirect(url_for('registro'))
+        return redirect(url_for('lista'))
 
 
 if __name__ == '__main__':
