@@ -41,7 +41,24 @@ def edit_contact(id):
     data =  cur.fetchall()
     return render_template('edit-contact.html', contact = data[0])
     
-
+@app.route('/update/<id>', methods=['POST'])
+def update_contact(id):
+    if request.method == 'POST' :
+        fullname = request.form['fullname']
+        phone = request.form['phone']
+        email = request.form['email']
+        cur = mysql.connection.cursor()
+        cur.execute ("""
+        
+            UPDATE contacts
+            SET fullname = %s,
+                phone = %s,
+                email = %s
+            WHERE ID = %s    
+        """, (fullname, phone, email, id))
+        mysql.connection.commit()
+        flash('El contacto ha sido actualizado correctamente ')
+        return redirect(url_for('lista'))
 
 @app.route('/estadisticas')
 def estadisticas():
@@ -71,6 +88,8 @@ def add_contact():
         mysql.connection.commit()
         flash('El contacto ha sido agregado correctamente ')
         return redirect(url_for('lista'))
+
+
 
 
 if __name__ == '__main__':

@@ -5,7 +5,10 @@
 {% with messages = get_flashed_messages() %}
 {% if messages  %}
 {% for message in messages %}
-<p>{{ message }}</p>
+<div class="badge badge-primary text-wrap" style="width">
+    <h1>{{ message }}</h1>
+  </div>
+
 {% endfor %}
 {% endif %}
 {% endwith %}
