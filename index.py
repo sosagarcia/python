@@ -6,7 +6,7 @@ app = Flask(__name__)
 #MYSQL connection
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_PASSWORD'] = 'admin'
 app.config['MYSQL_DB'] = 'flaskcontacts'
 mysql = MySQL(app)
 
@@ -97,3 +97,4 @@ if __name__ == '__main__':
 
 
 # https://youtu.be/IgCfZkR8wME?t=3276
+# https://bootswatch.com/

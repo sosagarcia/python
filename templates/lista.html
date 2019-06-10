@@ -5,27 +5,30 @@
 {% with messages = get_flashed_messages() %}
 {% if messages  %}
 {% for message in messages %}
-<div class="badge badge-primary text-wrap" style="width">
-    <h1>{{ message }}</h1>
-  </div>
-
+<div class="card text-white bg-success mb-3" style="max-width: 25rem;">
+    <div class="card-header">Mensaje del sistema</div>
+    <div class="card-body">
+        <h4 class="card-title">Operación realizada con éxito</h4>
+        <p class="card-text">{{ message }}</p>
+    </div>
+</div>
 {% endfor %}
 {% endif %}
 {% endwith %}
 
 <div>
 
-<table class = "table table-dark">
-    <thead>
-        <tr>
-            <td>Nombre</td>
-            <td>Teléfono</td>
-            <td>Email</td>
-            <td>Acciones</td>
-        </tr>
-    </thead>
-    <tbody>
-        {% for contact in contactos %}
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <td>Nombre</td>
+                <td>Teléfono</td>
+                <td>Email</td>
+                <td>Acciones</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in contactos %}
             <tr>
                 <td>{{contact.1}}</td>
                 <td>{{contact.2}}</td>
@@ -35,9 +38,9 @@
                     <a href="/delete/{{contact.0}}">Borrar</a>
                 </td>
             </tr>
-        {% endfor %}
-    </tbody>
-</table>
+            {% endfor %}
+        </tbody>
+    </table>
 
 </div>
 <a class="btn btn-primary" href="registro" role="button"> Registrar nuevo contacto</a>

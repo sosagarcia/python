@@ -1,79 +1,83 @@
 body {
-
-   margin: 0;
-   padding: 0;
-   background: url(../img/Fondo.jpeg) no-repeat center top fixed;
-   background-size: cover;
-   font-family: sans-serif;
-   height: 100vh;
- }
-
- .login-box {
-   width: 320px;
-   height: 700px;
-    
-   border-radius: 20px;
-   top: 50%;
-   left: 50%;
-   color: #fff;
-   position: absolute;
-   transform: translate(-50%, -50%);
-   box-sizing: border-box;
-   padding: 70px 30px;
- }
- .login-box h1 {
-   margin: 0;
-   padding: 0 0 20px;
-   text-align: center;
-   font-size: 30px;
- }
- .login-box label {
-   margin: 0;
-   padding: 0;
-   font-weight: bold;
-   display: block;
- }
- .login-box input {
-   width: 100%;
-   margin-bottom: 20px;
- }
- .login-box input[type="text"], .login-box input[type="password"] {
-   border: none;
-   border-bottom: 1px solid ;
-   border-bottom: 1px solid #fff;
-   color: #fff;
-   background: rgb(66, 66, 66);
-   border-radius: 5px;
-   outline: none;
-   height: 40px;
-   font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background: url(../img/Fondo.jpeg) no-repeat center top fixed;
+  background-size: cover;
+  font-family: sans-serif;
+  height: 100vh;
 }
 
+.login-box {
+  width: 320px;
+  height: 700px;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+
+.login-box h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.login-box label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+}
+
+.login-box input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login-box input[type="text"], .login-box input[type="password"] {
+  border: none;
+  border-bottom: 1px solid;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  background: rgb(66, 66, 66);
+  border-radius: 5px;
+  outline: none;
+  height: 40px;
+  font-size: 16px;
+}
 
 .login-box input[type="submit"] {
-   border: none;
-   outline: none;
-   height: 40px;
-   background: rgb(134, 189, 231)  ;
-   color: #fff;
-   font-size: 18px;
-   border-radius: 20px;
+  border: none;
+  outline: none;
+  height: 40px;
+  background: rgb(134, 189, 231);
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
 }
+
 .login-box input[type="submit"]:hover {
-   cursor: pointer;
-   background: #124D78;
-   color: rgb(255, 255, 255);
+  cursor: pointer;
+  background: #124D78;
+  color: rgb(255, 255, 255);
 }
+
 .login-box a {
-   color: rgb(134, 189, 231);
- }
+  color: rgb(134, 189, 231);
+}
+
 .login-box a:hover {
-   color: #fff;
- }
- .boton{
-position: fixed;
-bottom: 0;
-right: 0;
+  color: #fff;
+}
+
+.boton {
+  position: fixed;
+  bottom: 0;
+  right: 0;
   text-decoration: none;
   padding: 10px;
   font-weight: 600;
@@ -82,14 +86,15 @@ right: 0;
   background-color: #1883ba;
   border-radius: 6px;
   border: 2px solid #0016b0;
- }
- .boton:hover {
-   cursor: pointer;
+}
+
+.boton:hover {
+  cursor: pointer;
   color: #18ba20;
   background-color: #ffffff;
 }
 
-.boton1{
+.boton1 {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -102,14 +107,17 @@ right: 0;
   border-radius: 6px;
   border: 2px solid #00b009;
 }
+
 .boton1:hover {
   cursor: pointer;
   color: #18ba3b;
   background-color: #ffffff;
 }
 
-.btn{
-    position: fixed;
-    bottom: 0;
-    right: 0;
+.btn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
+
+/*lista*/
