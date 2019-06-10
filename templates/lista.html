@@ -2,48 +2,52 @@
 
 {% block conten %}
 
-{% with messages = get_flashed_messages() %}
-{% if messages  %}
-{% for message in messages %}
-<div class="card text-white bg-success mb-3" style="max-width: 25rem;">
-    <div class="card-header">Mensaje del sistema</div>
-    <div class="card-body">
-        <h4 class="card-title">Operación realizada con éxito</h4>
-        <p class="card-text">{{ message }}</p>
+
+
+<div class="row">
+
+    <div class="col-md-7">
+        {% with messages = get_flashed_messages() %}
+        {% if messages  %}
+        {% for message in messages %}
+        <div class="alert alert-dismissible alert-success fade show" role="alert">
+            <strong> {{ message }} </strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <table class="table table-bordered table-striped bg-white table-sm">
+            <thead>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Teléfono</td>
+                    <td>Email</td>
+                    <td>Acciones</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contact in contactos %}
+                <tr>
+                    <td>{{contact.1}}</td>
+                    <td>{{contact.2}}</td>
+                    <td>{{contact.3}}</td>
+                    <td>
+                        <a href="/edit/{{contact.0}}" class="btn btn-secondary">Editar</a>
+                        <a href="/delete/{{contact.0}}" class="btn btn-danger btn-delete">Borrar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
     </div>
 </div>
-{% endfor %}
-{% endif %}
-{% endwith %}
 
-<div>
-
-    <table class="table table-dark">
-        <thead>
-            <tr>
-                <td>Nombre</td>
-                <td>Teléfono</td>
-                <td>Email</td>
-                <td>Acciones</td>
-            </tr>
-        </thead>
-        <tbody>
-            {% for contact in contactos %}
-            <tr>
-                <td>{{contact.1}}</td>
-                <td>{{contact.2}}</td>
-                <td>{{contact.3}}</td>
-                <td>
-                    <a href="/edit/{{contact.0}}">Editar</a>
-                    <a href="/delete/{{contact.0}}">Borrar</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-
-</div>
-<a class="btn btn-primary" href="registro" role="button"> Registrar nuevo contacto</a>
+<a class="boton1 btn-primary" href="registro" role="button"> Registrar nuevo contacto</a>
 
 
 {% endblock %}

@@ -114,10 +114,12 @@ body {
   background-color: #ffffff;
 }
 
-.btn {
-  position: fixed;
-  bottom: 0;
-  right: 0;
+/*lista*/
+
+.alert {
+  opacity: 0.8;
 }
 
-/*lista*/
+.alert:hover {
+  opacity: 1;
+}
