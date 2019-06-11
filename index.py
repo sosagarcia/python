@@ -1,7 +1,16 @@
 from flask import Flask, render_template, request, url_for, redirect, flash
 from flask_mysqldb import MySQL
 
+ejemploDiccionario = [
+    {
+        'author': 'Renato Sosa García',
+        'titulo': 'Trabajo de Fin de Grado',
+        'mensaje': 'Buenos días!'
+    }
+]
+
 app = Flask(__name__)
+
 
 # MYSQL connection
 app.config['MYSQL_HOST'] = 'localhost'
@@ -17,7 +26,7 @@ app.secret_key = 'mysecretkey'
 @app.route('/')
 def home():
 
-    return render_template('index.html')
+    return render_template('index.html', ejemplo=ejemploDiccionario)
 
 
 @app.route('/principal')
@@ -69,7 +78,7 @@ def estadisticas():
 
 @app.route('/registro')
 def registro():
-    return render_template('registro.html')
+    return render_template('registro.html', title='Registro')
 
 
 @app.route('/lista')
@@ -77,7 +86,7 @@ def lista():
     cur = mysql.connection.cursor()
     cur.execute('SELECT * FROM contacts')
     data = cur.fetchall()
-    return render_template('lista.html', contactos=data)
+    return render_template('lista.html', contactos=data, title='Lista')
 
 
 @app.route('/add_contact', methods=['POST'])
@@ -98,6 +107,8 @@ if __name__ == '__main__':
     app.run(port=5000, debug=True)
 
 
-# https://youtu.be/IgCfZkR8wME?t=5316
+#
 # https://bootswatch.com/
 # https://uigradients.com
+# https://www.youtube.com/watch?v=tZTpKF2pkQo
+#https://www.youtube.com/watch?v=QnDWIZuWYW0&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=2

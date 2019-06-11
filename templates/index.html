@@ -1,6 +1,17 @@
 {% extends "layout1.html" %}
 
 {% block conten %}
+{% for ejemplo in ejemplo %}
+
+<div class="card text-white bg-dark mb-3 " style="max-width: 20rem;">
+    <div class="card-header">{{ejemplo.titulo}}</div>
+    <div class="card-body">
+        <h4 class="card-title">{{ejemplo.author}} dice:</h4>
+        <p class="card-text">{{ejemplo.mensaje}}</p>
+    </div>
+</div>
+{% endfor %}
+
 <div class="login-box">
     <img src="../static/img/logo.png" class="avatar" alt="Avatar Image">
     <h1>Inicio de sesión</h1>
@@ -20,6 +31,9 @@
 </div>
 <a class="boton" href="principal"> Acceder</a>
 <a class="boton1" href="/"> Actualizar</a>
+
+
+
 
 
 {% endblock %}
